@@ -2,9 +2,9 @@ import axios from "axios";
 
 module.exports = (search, cb) => {
 
-	let api_key = '';
+	let api_key = '285f362a4f6cc63f443be8ae75b7438d';
 
-    let api_url = `http://omdbapi.com?apikey=${api_key}&s=${search}`
+    let api_url = 'https://api.themoviedb.org/3/movie/550?api_key=${api_key}&s=${search}'
 
     axios.get(api_url, {
 
@@ -24,11 +24,11 @@ module.exports = (search, cb) => {
 
 }
 
-// export default {
-//   // Gets all movies
-//   getMovie: function() {
-//     return axios.get("/api/movies");
-//   },
+export default {
+  // Gets all movies
+  getMovie: function() {
+    return axios.get("/api/movies");
+  }
 //   // Gets the movie with the given id
 //   getMoive: function(id) {
 //     return axios.get("/api/movies/" + id);
@@ -41,4 +41,4 @@ module.exports = (search, cb) => {
 //   saveMovie: function(movieData) {
 //     return axios.post("/api/movies", movieData);
 //   }
-// };
+};
